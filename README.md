@@ -6,7 +6,32 @@ Init Rez package from CookieCutter template.
 
 This project was bootstrapped with [Rez init](https://github.com/Ni-g-3l/rez-init).
 
-## ⚙️ Commands
+## 📤 Init command
+
+In order to speed up the rez package creation you can run the following command : 
+
+```
+rez init
+```
+
+You have two types of template package : 
+- Rez extension : As this one this template allows you to create custom rez command extension.
+- Rez package : This template create basic package hierarchy and fill up for you package.py information
+
+You can choose what kind of package you want to create with the following command :
+
+```
+rez init --type [package/extension] # package by default
+```
+
+Finally, you can customize which template is used for extension and package init by creating to environnement variable which point to the cookicutter of your choice.
+
+```
+export REZ_INIT_CUSTOM_EXTENSION_TEMPLATE=<your_extension_template>
+export REZ_INIT_CUSTOM_PACKAGE_TEMPLATE=<your_package_template>
+```
+
+## ⚙️ Dev Commands
 
 In the project directory, you can run:
 
