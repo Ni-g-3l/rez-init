@@ -9,10 +9,13 @@ class TemplateFactory:
         ExtensionTemplateInfo.KEY: ExtensionTemplateInfo,
     }
 
-    def get_factory_template(self, template_type):
-        info = self.INFO.get(template_type, self.INFO[PackageTemplateInfo.KEY])
-        template = os.environ.get(info.ENV_VAR_CUSTOM_KEY, info.TEMPLATE)
-        return template
+    def get_factory_template_info(self, template_type):
+        return self.INFO.get(template_type, self.INFO[PackageTemplateInfo.KEY])
 
-    def apply_template(self, template):
-        cookiecutter(template)
+    def get_custom_template(self, template_type):
+        info = self.get_factory_template_info(template_type)
+        custom_template = os.environ.get(info.ENV_VAR_CUSTOM_KEY, None)
+        return custom_template
+
+    def apply_template(self, template, directory=None):
+        cookiecutter(template, directory=directory)

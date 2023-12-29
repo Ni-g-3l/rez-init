@@ -26,13 +26,18 @@ def command(opts, parser=None, extra_arg_groups=None):
     from rez_init.core.template_factory import TemplateFactory
 
     factory = TemplateFactory()
-    template_path = factory.get_factory_template(opts.type)
 
     if opts.template:
         template_path = opts.template
+        factory.apply_template(template_path, directory=None)
 
-    factory.apply_template(template_path)
+    template_path = factory.get_custom_template(opts.type)
+    if template_path:
+        factory.apply_template(template_path, directory=None)
+        return
 
+    template_info = factory.get_factory_template_info(opts.type)
+    factory.apply_template(template_info.TEMPLATE, template_info.DIRECTORY)
 
 class InitCommand(Command):
     @classmethod
