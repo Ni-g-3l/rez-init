@@ -8,8 +8,6 @@ authors = ["{{cookiecutter.package_author}}"]
 
 requires = []
 
-def pre_commands():
-    # declare your pa
 
 def commands():
     # declare your package commands here
