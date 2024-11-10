@@ -1,10 +1,8 @@
 # Rez Package : {{cookiecutter.package_name}}
 
-{{cookiecutter.package_description}} from CookieCutter template.
-
 ![Demo](.media/header.png)
 
-This project was bootstrapped with [Rez Init](https://github.com/Ni-g-3l/rez-init).
+This project was bootstrapped with [Rez Init](https://github.com/Ni-g-3l/{{cookiecutter.package_name}}).
 
 ## 📤 {{cookiecutter.package_name}} command
 

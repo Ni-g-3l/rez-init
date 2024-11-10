@@ -1,10 +1,10 @@
 clean:
-	find . -name \*.py[cod] -delete
+	@echo "-------------------- CLEAN PACKAGE -------------------- "
+	find . -name \*.pyc -delete
 	find . -name __pycache__ -delete
+	@echo "------------------------------------------------------- "
 
 test:
-	python -m unittest discover
-
-coverage:
-	coverage run -m unittest discover
-	coverage report -m
+	@echo "---------------------- RUN TESTS ---------------------- "
+	python3 -m unittest discover tests
+	@echo "------------------------------------------------------- "

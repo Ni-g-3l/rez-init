@@ -1,10 +1,10 @@
 # Rez Command Extension : {{cookiecutter.extension_name}}
 
-{{cookiecutter.extension_command}} Rez package from CookieCutter template.
+{{cookiecutter.extension_description}}
 
 ![Demo](.media/header.png)
 
-This project was bootstrapped with [Rez {{cookiecutter.extension_command}}](https://github.com/Ni-g-3l/rez-init).
+This project was bootstrapped with [Rez {{cookiecutter.extension_command}}](https://github.com/Ni-g-3l/rez-{{cookiecutter.extension_command}}).
 
 ## 📤 {{cookiecutter.extension_name}} command
 
@@ -25,10 +25,6 @@ Uninstall Rez {{cookiecutter.extension_command}} from your current rez environme
 ### `make clean`
 
 Remove all python run artefacts.
-
-### `make coverage`
-
-Launches a tool for measuring code coverage of Python programs. It monitors your program, noting which parts of the code have been executed, then analyzes the source to identify code that could have been executed but was not.
 
 ### `make test`
 
